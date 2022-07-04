@@ -681,7 +681,7 @@ export class DirListing extends Widget {
         break;
       case 'drop':
         this.removeClass('jp-mod-native-drop');
-        this.evtNativeDrop(event as DragEvent);
+        //this.evtNativeDrop(event as DragEvent);
         break;
       case 'scroll':
         this._evtScroll(event as MouseEvent);

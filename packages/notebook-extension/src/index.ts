@@ -815,7 +815,7 @@ const plugins: JupyterFrontEndPlugin<any>[] = [
   factory,
   trackerPlugin,
   executionIndicator,
-  exportPlugin,
+  //exportPlugin,
   tools,
   commandEditItem,
   notebookTrustItem,

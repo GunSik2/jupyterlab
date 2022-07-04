@@ -32,8 +32,8 @@ import {
   FileUploadStatus,
   FilterFileBrowserModel,
   IFileBrowserCommands,
-  IFileBrowserFactory,
-  Uploader
+  IFileBrowserFactory
+  //Uploader
 } from '@jupyterlab/filebrowser';
 import { Contents } from '@jupyterlab/services';
 import { ISettingRegistry } from '@jupyterlab/settingregistry';
@@ -45,7 +45,7 @@ import {
   closeIcon,
   copyIcon,
   cutIcon,
-  downloadIcon,
+  //downloadIcon,
   editIcon,
   fileIcon,
   folderIcon,
@@ -316,7 +316,6 @@ const factory: JupyterFrontEndPlugin<IFileBrowserFactory> = {
  * Disabling this plugin will NOT disable downloading files from the server.
  * Users will still be able to retrieve files from the file download URLs the
  * server provides.
- */
 const downloadPlugin: JupyterFrontEndPlugin<void> = {
   id: '@jupyterlab/filebrowser-extension:download',
   requires: [IFileBrowserFactory, ITranslator],
@@ -361,6 +360,7 @@ const downloadPlugin: JupyterFrontEndPlugin<void> = {
     });
   }
 };
+ */
 
 /**
  * A plugin to add the file browser widget to an ILabShell
@@ -396,12 +396,13 @@ const browserWidget: JupyterFrontEndPlugin<void> = {
     browser.title.icon = folderIcon;
 
     // Toolbar
+    /*
     toolbarRegistry.addFactory(
       FILE_BROWSER_FACTORY,
       'uploader',
       (browser: FileBrowser) =>
         new Uploader({ model: browser.model, translator })
-    );
+    );*/
 
     setToolbar(
       browser,
@@ -1199,7 +1200,7 @@ const plugins: JupyterFrontEndPlugin<any>[] = [
   browser,
   shareFile,
   fileUploadStatus,
-  downloadPlugin,
+  //downloadPlugin,
   browserWidget,
   openWithPlugin,
   openBrowserTabPlugin,
